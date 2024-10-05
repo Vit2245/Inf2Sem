@@ -20,7 +20,6 @@ except FileNotFoundError:
 
 
 sheet = workbook['Лист1']
-
 sheet2 = workbook['Лист2']
 sheet3 = workbook['Лист3']
 
@@ -89,8 +88,6 @@ for i, x in enumerate(x_values, start=2):
     sheet2.cell(row=i, column=2).value = yy(x)
     sheet2.cell(row=i, column=3).value = zz(x)
 
-
-
 # Определяем диапазон значений x
 x_values_3 = numpy.arange(-1.0, 1.1, 0.1)
 y_values_3 = numpy.arange(-1.0, 1.1, 0.1)
@@ -102,8 +99,6 @@ for i, x in enumerate(x_values_3, start=2):
         sheet3.cell(row=i, column=1).value = x
         sheet3.cell(row=1, column=j).value = y
         sheet3.cell(row=i, column=j).value = zzz(x,y)
-
-
 
 # Сохраняем файл
 workbook.save("data.xlsx")
