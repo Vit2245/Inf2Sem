@@ -52,13 +52,13 @@ def ctg(x):
 
 # --- Пример использования ---
 def my_function(x):
-  return ctg(2*x)/pow(sin(2*x),2)
+  return 3/(pow(x,2)-pow(3,2))
 
-a = 0.8
-b = 1.2
+a = -1
+b = 2
 n = round((b-a)/0.05)
-
-print("Левые прямоугольники:", integrate_left_rect(my_function, a, b, n))
-print("Правые прямоугольники:", integrate_right_rect(my_function, a, b, n))
-print("Метод трапеций:", integrate_trapezoid(my_function, a, b, n))
-print("Метод Симпсона:", integrate_simpson(my_function, a, b, n))
+n=12
+print("Левые прямоугольники:", round(integrate_left_rect(my_function, a, b, n),5))
+print("Правые прямоугольники:", round(integrate_right_rect(my_function, a, b, n),5))
+print("Метод трапеций:", round(integrate_trapezoid(my_function, a, b, n),5))
+print("Метод Симпсона:", round(integrate_simpson(my_function, a, b, n),5))
