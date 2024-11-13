@@ -37,13 +37,6 @@ sheet['E1'] = 'y (while)'
 sheet['F1'] = 'g (while)'
 sheet['G1'] = 'z (while)'
 
-# Цикл for (остается без изменений)
-for i, x in enumerate(x_values, start=2):
-    sheet.cell(row=i, column=1).value = x
-    sheet.cell(row=i, column=2).value = y(x)
-    sheet.cell(row=i, column=3).value = g(x)
-    sheet.cell(row=i, column=4).value = z(x)
-
 # Цикл while (добавляем)
 i = 2
 j = 0
