@@ -56,9 +56,9 @@ def my_function(x):
 
 a = 0.8
 b = 1.2
-n = (b-a)/0.05
+n = round((b-a)/0.05)
 
-print("Левые прямоугольники:", integrate_left_rect(my_function, a, b, round(n)))
-print("Правые прямоугольники:", integrate_right_rect(my_function, a, b, round(n)))
-print("Метод трапеций:", integrate_trapezoid(my_function, a, b, round(n)))
-print("Метод Симпсона:", integrate_simpson(my_function, a, b, round(n)))
+print("Левые прямоугольники:", integrate_left_rect(my_function, a, b, n))
+print("Правые прямоугольники:", integrate_right_rect(my_function, a, b, n))
+print("Метод трапеций:", integrate_trapezoid(my_function, a, b, n))
+print("Метод Симпсона:", integrate_simpson(my_function, a, b, n))
