@@ -52,18 +52,11 @@ def zz(x):
     else:
         return 2*x+pow(sin(x),2)/(2+x)
 
-
-def  clean(sheet,n,m):
-    for i in range(2, len(n) + 2):
-        # отчитска первых 5-ти столбиков
-        for j in range(1, m+1):
-            sheet.cell(row=i, column=j).value = None
-
 def zzz(x,y):
     return pow(x,2)-2*pow(y,2)
 # Определяем диапазон значений x
 x_values = numpy.arange(-2.0, 2.1,0.1)
-clean(sheet,x_values,3)
+
 sheet['A1'] = 'x'
 sheet['B1'] = 'y'
 sheet['C1'] = 'g'
@@ -77,7 +70,7 @@ for i, x in enumerate(x_values, start=2):
 # Определяем диапазон значений x
 x_values = numpy.arange(-2.0, 2.1, 0.1)
 print(x_values)
-clean(sheet2,x_values,3)
+
 sheet2['A1'] = 'x'
 sheet2['B1'] = 'y'
 sheet2['C1'] = 'g'
@@ -92,7 +85,7 @@ for i, x in enumerate(x_values, start=2):
 x_values_3 = numpy.arange(-1.0, 1.1, 0.1)
 y_values_3 = numpy.arange(-1.0, 1.1, 0.1)
 print(x_values)
-clean(sheet3,x_values,len(y_values_3))
+
 sheet2['A1'] = 'x/y'
 for i, x in enumerate(x_values_3, start=2):
     for j, y in enumerate(y_values_3, start=2):
